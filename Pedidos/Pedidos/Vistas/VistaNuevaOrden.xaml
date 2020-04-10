@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pedidos.Vistas.VistaNuevaOrden"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Nuevo Pedido"
+             BindingContext="{Binding LocalizadorPrincipal, Source={StaticResource Localizador}}">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Titulo"></Label>
+            <Entry ></Entry>
+            <Label Text="Titulo"></Label>
+            <Entry ></Entry>
+            <Label Text="Titulo"></Label>
+            <DatePicker></DatePicker>
+            <Button BackgroundColor="{StaticResource MainColor}" Text="Guardar" BorderRadius="15"></Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:Pedidos.Infraestructura;assembly=Pedidos"
+             x:Class="Pedidos.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="MainColor">#0442BF</Color>
+            <Color x:Key="FontColor">#847B8C</Color>
+            <Color x:Key="AccentColor1">#04D9D9</Color>
+            <Color x:Key="AccentColor2">#D9B504</Color>
+            <Color x:Key="BackgroundColor">#DFF2F2</Color>
+            
+            <!--Localizador-->
+            <infra:InstanciarLocalizador x:Key="Localizador"></infra:InstanciarLocalizador>
+            
+            <!--Diferencias por plataformas-->
+            <!--Diferentes tamaños de letras por plataforma-->
+            <OnPlatform x:Key="FormatoGeneralBotones" 
+                        x:TypeArguments="Font"
+                        iOS="12"
+                        Android="14"
+                        ></OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

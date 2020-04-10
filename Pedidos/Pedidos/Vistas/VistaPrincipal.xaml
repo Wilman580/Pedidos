@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pedidos.Vistas.VistaPrincipal"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Mis Pedidos"
+             BindingContext="{Binding LocalizadorPrincipal, Source={StaticResource Localizador}}">
+    <ListView ItemsSource="{Binding Ordenes}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="ic_launcher.png" HeightRequest="50" WidthRequest="50" VerticalOptions="Start"></Image>
+                        <StackLayout Grid.Column="1">
+                            <Label VerticalOptions="Center" TextColor="{StaticResource FontColor}" Text="{Binding Titulo}" FontAttributes="Bold"></Label>
+                            <Label VerticalOptions="Center" TextColor="{StaticResource FontColor}" Text="{Binding Descripcion}"></Label>
+                            <Label VerticalOptions="Center" TextColor="{StaticResource MainColor}" Text="{Binding FechaEntrega, StringFormat='{0:yyyy/MM/dd}'}"></Label>
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="VistaNuevaOrden"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+</ContentPage>
